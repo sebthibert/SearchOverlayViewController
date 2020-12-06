@@ -13,9 +13,9 @@ public class SearchOverlayViewController: UIViewController, UITextFieldDelegate,
   private var tableViewHeightConstraint: NSLayoutConstraint!
   private var stackViewBottomConstraint: NSLayoutConstraint!
   private var maximumHeight: CGFloat = 0
-  weak var tableViewDelegate: UITableViewDelegate?
-  weak var tableViewDataSource: UITableViewDataSource?
-  weak var modalPresenterDelegate: SearchOverlayPresenterDelegate?
+  public weak var tableViewDelegate: UITableViewDelegate?
+  public weak var tableViewDataSource: UITableViewDataSource?
+  public weak var modalPresenterDelegate: SearchOverlayPresenterDelegate?
 
   public init(configuration: SearchOverlayViewConfiguration, searcher: @escaping ((String?, @escaping ((Bool) -> Void)) -> Void)) {
     self.configuration = configuration
